@@ -2,6 +2,11 @@
 
 set -e
 
+if [[ "${DYNO}" == test.* ]]; then
+	# Skip Yarn buildpack on CI
+	exit 0
+fi
+
 BUILD_DIR=$1
 
 yarn --cwd "$BUILD_DIR" install
