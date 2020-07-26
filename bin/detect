@@ -2,6 +2,11 @@
 
 BUILD_DIR=$1
 
+if [[ "${DYNO}" == test.* ]]; then
+	# Skip Yarn buildpack on CI
+	exit 1
+fi
+
 if [ -f "${BUILD_DIR}/yarn.lock" ] && [ -f "${BUILD_DIR}/webpack.config.js" ]; then
   echo "Yarn buildpack"
   exit 0
