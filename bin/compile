@@ -2,5 +2,7 @@
 
 set -e
 
-yarn install
-yarn build
+BUILD_DIR=$1
+
+yarn install --cwd "$BUILD_DIR"
+yarn build --cwd "$BUILD_DIR"

@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-if [ -f "$1/yarn.lock" ] && [ -f "$1/webpack.config.js" ]; then
+BUILD_DIR=$1
+
+if [ -f "$BUILD_DIR/yarn.lock" ] && [ -f "$BUILD_DIR/webpack.config.js" ]; then
   echo "Yarn buildpack"
   exit 0
 else
