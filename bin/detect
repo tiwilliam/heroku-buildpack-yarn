@@ -3,7 +3,7 @@
 BUILD_DIR=$1
 
 if [ -f "${BUILD_DIR}/yarn.lock" ] && [ -f "${BUILD_DIR}/webpack.config.js" ]; then
-  echo "Yarn buildpack"
+  echo "Yarn"
   exit 0
 else
   exit 1
