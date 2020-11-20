@@ -9,5 +9,5 @@ fi
 
 BUILD_DIR=$1
 
-yarn --cwd "$BUILD_DIR" install
-yarn --cwd "$BUILD_DIR" build
+yarnpkg --cwd "$BUILD_DIR" install
+yarnpkg --cwd "$BUILD_DIR" build
